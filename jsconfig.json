@@ -1,0 +1,8 @@
+// 为项目配置 js文件的 jquery 提示
+{
+  "typeAcquisition": {
+    "include": [
+      "jquery"
+    ]
+  }
+}
