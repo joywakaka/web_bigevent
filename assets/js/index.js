@@ -23,18 +23,16 @@ function getUserInfo() {
 
 function renderAvatar(user) {
     var name = user.nickname || user.username;
-    $('#welcome').html('欢迎&nbsp' +
-        name);
+    $('#welcome').html('欢迎&nbsp;&nbsp;' + name);
     //按需渲染用户头像
     if (user.user_pic !== null) {
-        $('.layui-nav-img').attr('src', user.user_pic).show()
-        $('.text-avatar').hide()
+        $('.layui-nav-img').attr('src', user.user_pic).show();
+        $('.text-avatar').hide();
     } else {
-        $('.layui-nav-img').hide()
-            //选择第一个字母 并大写
-        var first = name[0].toUpperCase()
-
-        $('.text-avartar').text(first).show()
+        $('.layui-nav-img').hide();
+        //选择第一个字母 并大写
+        var first = name[0].toUpperCase();
+        $('.text-avatar').text(first).show();
     }
 }
 
@@ -46,5 +44,5 @@ function logout() {
         location.href = '/login.html';
         layer.close(index);
 
-    });
+    })
 }
