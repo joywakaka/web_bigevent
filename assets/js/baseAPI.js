@@ -15,7 +15,7 @@ $.ajaxPrefilter(function(options) {
         if (res.responseJSON.statyanzhengus === 1 && res.responseJSON.message === '身份验证失败') {
             //强制清空token
             localStorage.removeItem('token')
-            location.href = '/login.html'
+            window.top.location.href = '/login.html'
         }
     }
 
