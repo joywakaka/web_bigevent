@@ -11,13 +11,12 @@ $.ajaxPrefilter(function(options) {
 
     //为全局统一挂载 complete 回调函数
     options.complete = function(res) {
+        // console.log(res);
         if (res.responseJSON.statyanzhengus === 1 && res.responseJSON.message === '身份验证失败') {
             //强制清空token
             localStorage.removeItem('token')
             location.href = '/login.html'
         }
-
     }
-
 
 })
